@@ -1,18 +1,19 @@
 <?php
-class ChineseLotteryType implements TempDictionary {
+class ChineseLotteryType implements TempDictionary
+{
     public function dictionary(): array
     {
         return [
 
-            1=>"5分彩",
-            2=>"PK 10",
-            3=>"快三",
-            5=>"3D",
-            6=>"11选5",
-            8=>"六合彩",
-            9=>"PC 二十八", 
-            10=>"快乐8",
-                   ];
+            1 => "5分彩",
+            2 => "PK 10",
+            3 => "快三",
+            5 => "3D",
+            6 => "11选5",
+            8 => "六合彩",
+            9 => "PC 二十八",
+            10 => "快乐8",
+        ];
     }
 
     public function saveToDB()
@@ -24,7 +25,7 @@ class ChineseLotteryType implements TempDictionary {
             $parameters = ['name' => $value, 'lt_id' => $key];
             $save->saveData($sql, $parameters);
         }
-        echo "Records Updated for Chinese </br> ";
-        
+        // echo "Records Updated for Chinese </br> ";
+
     }
 }
